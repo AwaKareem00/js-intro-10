@@ -1,0 +1,77 @@
+
+
+
+
+STATEMENT: any line of code that is written with any programming language
+
+console.log ('hello'); // this is JS or this
+System.out.println('hello'); // this is for Java
+console.writeline('hello'); // this is C#
+
+COMMENTS: are used for short descriptuons
+
+// used for single line COMMENTS
+/*
+multi-line
+COMMENTS
+*/
+
+to duplicat 
+option+shift+up arrow
+option+shift+down arrow
+
+
+VARIABLES:
+-It is a special container that stores a value
+-you can change the initial value?
+
+before 2015 
+-there was only var keyword used for VARIABLES
+-you can re-assign values to var VARIABLES
+
+after 2015
+-JS introduced in 2 new keywords: let and const to be used instead of var keyword
+-let can be re-assigned with a new value
+-const is used for constants and cannot be re-assigned
+
+
+-lets can be declared and assigned a value later 
+-let variable value will be undefined if its declared but not assigned with any value
+-but const cannot be declared without a value and must
+
+
+Data type:
+String: is a text data type which can be stored in variables using single or double quotes
+number: is number data which can be stored in variables wihtout quotes
+
+concatanation: combining multiples strings together using + operator
+
+number + number : arithmetic operation
+string + string : concatanatiom
+string + number
+
+'5' + 3 = '53'
+'5' + 3 + 2 = '532'
+'5' + (3 + 2) = '55'
+2 + 1 + '0' = '30'
+
+'Hello' + 'World' = 'HelloWorld'
+
+
+Variable Naming: how should we name our variables
+
+
+convention: it is not a written rule but followed by all coders/programmers
+
+
+
+
+
+
+
+
+
+
+
+\\\\\\\\
+

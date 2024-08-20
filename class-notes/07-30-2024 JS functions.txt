@@ -1,0 +1,20 @@
+
+
+
+////////////////
+1. task - what it does
+2. give it a maningful name
+3. paramaters or arguments
+4. teturn type vs void type
+5. static or non-static
+
+
+static
+Math.max()
+Number.isIntegee()
+
+
+Non-static
+'Hello'.toUpperCase()
+
+String.value()

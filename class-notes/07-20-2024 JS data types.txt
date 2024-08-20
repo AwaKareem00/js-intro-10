@@ -1,0 +1,119 @@
+debugging: trouble shooting the program to find issues, logic errors etc. 
+
+escape sequences: 
+\' insert a single qupte
+\" insert a double quote
+\\ insert a backward slash 
+\t insert a tab space
+\n insert a new line
+
+with ES6, js added with backticks which provides temolate literals these backtiks 
+
+`   hello,
+
+    today is saturday and we are here to learn more
+about 'javascripr' and its data types.
+
+// sinlge line comments 
+/*
+
+
+Variables: 
+special containers used to tore data and these variables can be accessed later in your progra,.
+
+syntax: Initialization
+var variableName = value;
+let variableName = value;
+const VariableName = value;
+
+Declaration:
+var variableName; // undefined
+let variableName; // undefined
+
+assigment 
+VariableName = value;
+
+re-assigment;
+variableName = value;
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+DATA TYPES:
+
+primitive types: basic types that ussualy tores a peice of info
+7 primitives:
+stringnumber: text
+BigInt: number
+Boolean: true or false
+undefined: 
+null:
+symbol: 
+
+refernce types: complex types whoch can store more information
+arrays, maps
+
+
+
+1. String: a sequence of characters (zero, one or multiple chacraters)
+    we store strings in single or double quotes
+    let name = 'john';
+    let city = 'chicago';
+
+    ''      -> empty string
+    ' '     -> string 
+    '123'   -> string
+    'undefined -> string
+    'null' -> string
+
+2. number: is used to store all absolute and decimal numbers (8 bytes)
+Whole NUmbers; absolute numbers: 1, 2, 10, 25, 100
+Decimal numbers; floating numbers: 2.5, 10.99, 13.756934643
+
+
+3. BigInt: used to store larger number (more than 8 bytes)
+
+
+
+
+= vs == vs ===
+=        assignment operator
+==       comparison operator (loose)
+===      comparison operator (strict)
+
+3 == 3    -> true
+3 == '3'  -> true ( it checks the value only not the data type)
+3 === '3' -> flase ( it checls both the value and the data type)
+
+'5' === 'five'   -> false 
+'5' === '50'     -> false
+'5' === '5'      -> true
+
+
+deprecation
+var is a reserved key word but it might get depricated in the future as we use let and comst now
+
+
+undefined vs null
+undefined is the default type when you feclare a variable but do not provide any value
+null is speccially a stating that this variable holds no value
+
+type pf undefined will return undefined 
+typeof null return pbject
+
+let laptopModel; 
+
+
+
+
+ZIPCODE: "12345 1234", "1234 123", "12345 -1234"
+PHONE: "000.000.0000", "000 000 0000", "(000) 000-0000"
+
+
+Object data type is used to store key-value pairs, properties
+firstName -> 'john'
+lastName -> 'doe'
+age -> 25
+phonenumber -> '000 000-0000'
+email -> ;johndoe@gmail.com
+password - 'johndoe1234'
