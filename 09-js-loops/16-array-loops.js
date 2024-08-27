@@ -45,8 +45,8 @@ console.log(citiesWSixMore);
 
 const citiesWI = [];
 
-for(const city of citiesWI) {
-    if(city.toLowerCase().includes('i')citiesWI.push(city));
+for(const city of cities) {
+    if(city.toLowerCase().includes('i')) citiesWI.push(city);
 }
 
 console.log(citiesWI);
