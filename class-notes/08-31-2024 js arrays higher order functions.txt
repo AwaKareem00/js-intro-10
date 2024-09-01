@@ -1,0 +1,100 @@
+how to create functions in js
+
+1. function decleration - traditional 
+
+
+SYNTAX
+function funcName() {
+    // block
+}
+
+
+
+function sum(a, b) {
+    return a + b;
+}
+
+sum(3, 5);
+
+
+2. fucntion expression
+const sum = function(a, b) {
+    return a + b;
+}
+
+
+sum(3, 5);
+
+
+3. arrow functions: released with ES6 and it provides a more concise way tp create functions
+const sum => (a, b) {
+    return a + b;
+}
+
+
+
+// create a function called product which returns the multiplication of 2 numbers
+
+const product => (a, b) {
+    return a * b;
+}
+
+// write a fucntion which prints Hello
+
+console.log('Hello');
+
+const printsHello => () {
+    console.log('Hello');
+}
+
+function printsHello() {
+    console.log('Hello');
+}
+
+
+// Enhanced arrow function when there is only one line of code within body
+
+const product = (a, b) => a * b; // return type
+const printHello = () => console.log('Hello'); // void type
+
+const arr - [40, 30, 2, -5];
+
+arr.sort((a, b) => a - b)
+
+fucntion funcName(a, b) {
+    return a - b;
+}
+
+
+function getInfo() {
+    console.log('Today is Saturday);
+}
+
+fucntion greet(func) {
+    console.log('Hello');
+    func();
+}
+
+greet(getInfo);
+
+OUTPUT:
+Hello
+Today is Saturday
+
+
+call back function ( passed as an argument to another function)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
