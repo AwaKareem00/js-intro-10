@@ -1,0 +1,23 @@
+mutable: changin
+imutable: not chaning
+
+arrsy and objects are mutable data types, and some of theur methods can change their values
+const arr = [ 1, 2, 3 ];
+
+arr.push(4): 
+
+
+
+
+let name = 'John';
+
+name = 'James';
+
+
+
+
+
+
+
+
+
