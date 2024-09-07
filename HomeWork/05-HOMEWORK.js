@@ -94,7 +94,7 @@ for(let i = 3; i * i <= num; i+= 2) {
         return false;
     }
 }
-return true
+return true;
 }
 
 console.log(isPrime(5));
@@ -179,5 +179,4 @@ console.log(isPasswordValid("Chicago12345US!#$%"));
 console.log(isPasswordValid("Abcd1234$"));
 console.log(isPasswordValid("Chicago123$"));
 console.log(isPasswordValid("Test1234#"));
-
 

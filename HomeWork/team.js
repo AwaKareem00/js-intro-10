@@ -1,81 +1,106 @@
+/* TASK-3You are given a JS Array below:
+Find the cheapest book in the bookstore           -> To Kill a Mockingbird
+Find the most expensive book in the bookstore   -> Harry Potter and the Sorcerer's 
+Stone
+Find all Classic books         -> [ 'The Great Gatsby', 'To Kill a 
+Mockingbird' ] */
+const bookstore = [
+    {
+        title: "The Great Gatsby",
+        author: "F. Scott Fitzgerald",
+        genre: "Classic",
+        price: 9.99
+    },
+    {
+        title: "To Kill a Mockingbird",
+        author: "Harper Lee",
+        genre: "Classic",
+        price: 7.99
+    },
+    {
+        title: "The Hitchhiker's Guide to the Galaxy",
+        author: "Douglas Adams",
+        genre: "Science Fiction",
+        price: 12.49
+    },
+    {
+        title: "Harry Potter and the Sorcerer's Stone",
+        author: "J.K. Rowling",
+        genre: "Fantasy",
+        price: 14.99
+    },
+    {
+        title: "The Da Vinci Code",
+        author: "Dan Brown",
+        genre: "Mystery",
+        price: 10.99
+    }
+];
 
-console.log('\n---------------TASK01---------------\n');
-let ranNum0_51 = Math.floor((Math.random() * 51) * 5);
-console.log(`The random number * 5 = {${ranNum0_51}}`);
-/*Requirement:
-Write a program that generates two random numbers
-between 1 and 10 (both 1 and 10 are included)
-Find the min number
-Find the max number
-Find the absolute difference of the numbers
-Expected result:
-Min number = {min}
-Max number = {max}
-Difference = {difference
-*/
-console.log('\n---------------TASK02---------------\n');
-let ranNum1_10 = Math.ceil(Math.random() * 10), ranNum21_10 = Math.ceil(Math.random() * 10);
-console.log(`Minimum number = {${Math.min(ranNum1_10, ranNum21_10)}}`);
-console.log(`Maximum number = {${Math.max(ranNum1_10, ranNum21_10)}}`);
-console.log(`Difference = {${Math.abs(ranNum1_10 - ranNum21_10)}}`);
-/*Requirement:
-Write a program that generates a random number
-between 50 and 100 (both 50 and 100 are included)
-Find the remainder of the number by 10
-Expected result:
-The random number % 10 = {result
-    */
-console.log('\n---------------TASK03---------------\n');
-let ranNum50_100 = Math.floor(Math.random() * 51) + 50;
-let remainder = ranNum50_100 % 10;
-console.log(`The random number % 10 = {${remainder}}`);
-/*Requirement:
-Write a program that generates 5 random numbers between
-1 to 10 (1 and 10 are included)
-Calculate some points based on numbers generated. So, the
-points will be calculated as below
-1st  number will be multiplied by 5 and added as points
-2nd number will be multiplied by 4 and added as points
-3rd number will be multiplied by 3 and added as points
-4th number will be multiplied by 2 and added as points
-5th number will be multiplied by 1 and added as points
-Test data:
-3 7 2 1 8
-Expected result:
-59
-*/
-console.log('\n---------------TASK04---------------\n');
-let ran1 = Math.ceil(Math.random() * 10);
-let ran2 = Math.ceil(Math.random() * 10);
-let ran3 = Math.ceil(Math.random() * 10);
-let ran4 = Math.ceil(Math.random() * 10);
-let ran5 = Math.ceil(Math.random() * 10);
-console.log(ran1, ran2, ran3, ran4, ran5);
-console.log(5 * ran1 + 4 * ran2 + 3 * ran3 + 2 * ran4 + 1 * ran5);
-/*
-Requirement:
-Write a program that generates 4 random numbers as
-below;
-1st  number to be between 1 and 25 (both included)
-2nd number to be between 26 and 50 (both included)
-3rd number to be between 51 and 75 (both included)
-4th number to be between 76 and 100 (both included)
-Find the absolute difference between the max and min
-number
-Find the absolute difference between the second and
-third number
-Find the average of all 4 numbers
-Expected result:
-Difference of max and min = {result}
-Difference of second and third = {result}
-Average of all = {average
-*/
-console.log('\n---------------TASK05---------------\n');
-let ran01 = Math.ceil(Math.random() * 25);
-let ran02 = Math.ceil(Math.random() * 25) + 25;
-let ran03 = Math.ceil(Math.random() * 25) + 50;
-let ran04 = Math.ceil(Math.random() * 25) + 75;
-console.log(`Difference of max and min = {${Math.abs(Math.max(ran01, ran02, ran03, ran04) - Math.min(ran01, ran02, ran03, ran04))}}`);
-console.log(`Difference of second and third = {${Math.abs(ran02 - ran03)}}`);
-console.log(`Average of all = {${(ran01 + ran02 + ran03 + ran04) / 4}}`);
+let cheapestBook = bookstore[0];
+let mostExpensiveBook = bookstore[0];
 
+for (let book of bookstore) {
+if(book.price < cheapestBook.price) {
+    cheapestBook = book;
+}
+if(book.price > mostExpensiveBook.price) {
+    mostExpensiveBook = book;
+}
+}
+
+
+console.log(cheapestBook.title);
+console.log(mostExpensiveBook.title);
+
+
+const classicBooks = bookstore.filter(book => book.genre === 'Classic').map(book => book.title);
+
+console.log(classicBooks);
+
+
+
+const shoppingCart = {
+    userId: 12345,
+    items: [
+        {
+            productId: 1,
+            productName: 'Laptop',
+            price: 999.00,
+            quantity: 1,
+            specifications: {
+                brand: 'Dell',
+                screen: '15.6 inches',
+                processor: 'Intel Core i7'
+            }
+        },
+        {
+            productId: 2,
+            productName: 'Smartphone',
+            price: 499.00,
+            quantity: 2,
+            specifications: {
+                brand: 'Apple',
+                model: 'iPhone 12',
+                color: 'Space Gray'
+            }
+        },
+        {
+            productId: 3,
+            productName: 'Headphones',
+            price: 149.00,
+            quantity: 3,
+            specifications: {
+                brand: 'Sony',
+                type: 'Over-ear',
+                wireless: true
+            }
+        }
+    ],
+    shippingAddress: {
+        street: '123 Main Street',
+        city: 'Anytown',
+        zipCode: '12345'
+    },
+    orderDate: '2023-08-29'
+};
