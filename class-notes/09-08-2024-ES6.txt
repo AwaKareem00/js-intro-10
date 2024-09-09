@@ -1,0 +1,7 @@
+oob means putting real life objects into programming
+
+
+const mouse = {
+    brand: 'Logi',
+    color: 'Black'
+}
