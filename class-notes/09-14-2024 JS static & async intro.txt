@@ -1,0 +1,12 @@
+js started yo im OOP
+encapsulation: making class properties/feilds/ instamce variable/ states private and providing public gitters and setters
+inheritance: this conept is ued to build parent child relationship between calasses to increase reusability. child can use parent property constructors and methods.
+abstraction: it is  providing abstract methods and child class must provide the body.
+polymorphism: one object being able to get into many shapes.
+
+sync vs async
+
+// sync
+console.log('1');
+console.log('2');
+console.log('3');

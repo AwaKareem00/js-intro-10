@@ -198,25 +198,28 @@ countPrimes([7, 4, 11, 23, 17])  -> 4
 countPrimes([41, 53, 19, 47, 67])  -> 5
 */
 
-const countPrimes = arr => {
-    if (arr <= 1) {
-        return false;
-    }
-    else if (arr === 2) {
-        return true;
-    }
-    else if (arr % 2 === 0) {
-        return false;
-    }
-    for (let i = 3; i * i <= arr; i += 2) {
-        if (arr % i === 0) {
-            return false;
+function countPrimes(numbers) {
+    let count = 0;
+
+    const isPrime = (num) => {
+        if (num < 2) return false;
+
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i === 0) return false;
         }
+        return true;
+    };
+
+    for (let num of numbers) {
+        if (isPrime(num)) count++;
     }
-    return true;
+
+    return count;
 }
 
 console.log(countPrimes([-10, -3, 0, 1]));
+console.log(countPrimes([7, 4, 11, 23, 17]));
+console.log(countPrimes([41, 53, 19, 47, 67]));
 console.log('\n-----task9-----');
 /*Write a function named removeDuplicates() which takes an array argument 
 and returns a new array with all the duplicates removed.
@@ -238,28 +241,49 @@ console.log(removeDuplicates(["abc", "xyz", "123", "ab", "abc", "ABC"]));
 console.log(removeDuplicates(["1", "2", "3", "2", "3"]));
 console.log(removeDuplicates([0, -1, -2, -2, -1]));
 console.log('\n-----task10-----');
-/*Write a method named isDateFormatValid() that takes a 
-string as an argument and returns true if the given date is 
-valid or returns false otherwise.
+
+/*
+Requirement: 
+Write a method named isDateFormatValid() that takes a string as an argument and returns true if the given date is valid or returns false otherwise.
 Expected Format: nn/nn/nnnn
-So, it must be presented as 
-<2digits>/<2digits>/<4digits>
+So, it must be presented as <2digits>/<2digits>/<4digits>
+
 Examples:
-isDateFormatValid("")  -> false
-isDateFormatValid("15/30/2020")  -> false
-isDateFormatValid("10-30-2020 ")  -> false
-isDateFormatValid("10.30.2020")  -> false
-isDateFormatValid("5/30/2020")  -> false
-isDateFormatValid("05/30/2020 ")  -> true
-isDateFormatValid("10/2/2020")  -> false
-isDateFormatValid("10/02/2020 ")  -> true */
+isDateFormatValid("") 			-> false
+isDateFormatValid("15/30/2020") 		-> false
+isDateFormatValid("10-30-2020 ") 		-> false
+isDateFormatValid("10.30.2020") 		-> false
+isDateFormatValid("5/30/2020") 		-> false
+isDateFormatValid("05/30/2020 ") 		-> true
+isDateFormatValid("10/2/2020") 		-> false
+isDateFormatValid("10/02/2020 ") 		-> true
+*/
 
 const isDateFormatValid = str => {
+    const dateParts = str.split('/');
+    const [monthStr, dayStr, yearStr] = dateParts;
 
+    if (monthStr.length !== 2 || dayStr.length !== 2 || yearStr.length !== 4) {
+        return false;
+    }
+
+    const month = Number(dateParts[0]);
+    const day = Number(dateParts[1]);
+    const year = Number(dateParts[2]);
+
+    const date = new Date(year, month - 1, day);
+
+    return date.getMonth() === month - 1 && date.getFullYear() === year && date.getDate() === day;
 }
-console.log(isDateFormatValid("10-30-2020 ") );
+
+console.log(isDateFormatValid(""));
+console.log(isDateFormatValid("15/30/2020"));
+console.log(isDateFormatValid("10-30-2020"));
 console.log(isDateFormatValid("10.30.2020"));
-console.log(isDateFormatValid("05/30/2020 "));
+console.log(isDateFormatValid("5/30/2020"));
+console.log(isDateFormatValid("05/30/2020"));
+console.log(isDateFormatValid("10/2/2020"));
+console.log(isDateFormatValid("10/02/2020"));
 console.log('\n-----task11-----');
 /*Write a method named secondMax() takes an array argument 
 and returns the second max number from the array.

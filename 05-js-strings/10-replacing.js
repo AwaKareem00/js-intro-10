@@ -1,6 +1,6 @@
 let str = 'I like apple and pineapple';
 
-let strR1 = str.replace('apple', 'oramge');
+let strR1 = str.replace('apple', 'orange');
 
 console.log(strR1);
 console.log(str);
