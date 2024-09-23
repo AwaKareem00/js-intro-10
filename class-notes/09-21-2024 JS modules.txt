@@ -1,0 +1,28 @@
+
+1. commomn js modules
+module.exports and requuire()
+
+2. es6 modules
+export and import
+
+
+HOW TO RUN JS CODE
+-NodeJS
+-Browser
+-Extentions ( you will never use this in a job)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
