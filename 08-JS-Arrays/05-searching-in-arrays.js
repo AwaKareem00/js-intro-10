@@ -1,7 +1,7 @@
 const numbers = [ 5, 10, 5, 10, 25, 100, 77, 5, 5 ];
 
 
-// we can check if the array contains something specific
+// we can check if the array contains something cific
 
 numbers.includes(5); // true
 numbers.includes(20); // false

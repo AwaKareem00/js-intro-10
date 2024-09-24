@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <h1>HTML Forms</h1>
+
+    <form>
+        <div class= "group">
+        <label for ="FName">First Name</label>
+        <input type="text" placeholder="First Name" />
+    </div>
+
+    <div class="group">
+        <label for ="Lname">Last Name</label> <!--U CAN USE ANY-->
+        <input type="text" placeholder="Last Name" />
+    </div>
+
+    <div class="group">
+        <label for ="email">Email</label> <!--U CAN USE ANY-->
+        <input type="email" placeholder="Email" id="Email" />
+    </div>
+
+    <div class="group">
+        <label for ="password">Password</label> <!--U CAN USE ANY-->
+        <input type="password" id="Password" />
+    </div>
+
+    <div class="group">
+        <label for ="age">Age</label> <!--U CAN USE ANY-->
+        <input type="number" placeholder="Age" id="age" min="0" />
+    </div>
+
+    <div class="group">
+        <p>Gender</p>
+        <label for ="male">Male</label> <!--U CAN USE ANY-->
+        <input type="radio" id="Male" name="gender" />
+
+        <label for ="female">Female</label> <!--U CAN USE ANY-->
+        <input type="radio" id="Female" name="gender" />
+    </div>
+
+    <div class="group">
+    <p>How did you find us?</p>
+    <label for="google">Google Search</label>
+    <input type="checkbox" id="google" />
+
+    <label for="instagram">Instagram</label>
+    <input type="checkbox" id="instagram" /> 
+
+    <label for="friend">Friend</label>
+    <input type="checkbox" id="friend" /> 
+    </div>
+
+    <div class="group">
+        <label for="friend">Choose your start date!</label>
+        <input type="date" id="friend"/>
+    </div>
+
+    <div class="group">
+        <label for="product">Choose your favorite color!</label>
+        <input type="color" id="color"/>
+    </div>
+
+    <div class="group">
+        <label for="product">Cars</label>
+        <select>
+            <option value="toyota">Toyota</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="bmw">BMW</option>
+        </select>
+    </div>
+    
+    <div class="group">
+        <label for="message">Please leave a message!</label>
+        <textarea placeholder="Your message!" id="message"></textarea>
+
+    </div>
+
+    <button type="submit">Submit</button>
+
+    </form>
+    
+</body>
+</html> 
