@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+         const userName = prompt('What is your name?');
+
+         if(userName && userName.length > 0) {
+            const IsContinue = confirm('Do you still want to continue');
+            if(IsContinue) {
+                alert('YAY');
+
+                console.log(`Your inner screen sizes are height: ${innerHeight} and width: ${innerWidth}`);
+
+                let TIMER = 10000;
+                console.log(`Page is about to reload in ${TIMER} seconds!`);
+
+                setTimeout(() => {
+                    window.location.reload();
+                }, TIMER)
+
+
+
+            } else {
+                console.log('OH NO :( You have to go.');
+            }
+
+
+            console.log(`Your inner screen sizes are height: ${innerHeight} and width: ${innerWidth}`);
+        
+         } else {
+            console.log('Sorry name not provided. :(');
+         }
+
+         localStorage.setItem('username', ans);
+
+        const alertAns = window.alert(`Welcome ${ans}!`)
+        console.log(alertAns);
+
+    </script>
+</body>
+</html>
