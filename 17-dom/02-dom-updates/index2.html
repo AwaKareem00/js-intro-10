@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Working with Node content</h1>
+    <div id="box"></div>
+
+    </div>
+    <div>
+        <script>
+            const box = document.getElementById('box');
+
+            box.innerHTML = 'box content' // text
+
+            box.innerHTML = '<p> this is a paragpraph inside of box</p>'
+
+
+            box.innerHTML += '<p> last sentence in box </p>'
+
+            box.textContent += '<p>Text content</p>'
+            box.textContent += 'Text content'
+
+            box.innerText += '<p> inner text</p>'
+            box.innerText += 'inner text'
+
+            const h4El = document.createElement('h4');
+            console.log(h4El);
+
+            h4El.innerHTML = 'h4 element content'; // you can use creatTextNode()
+            console.log(h4El);
+
+            // add elemnt to the dom
+            // box.innerHTML = h4El; // error
+
+            // append() or appendChild()
+            box.append(h4El);
+
+            const h5El = document.createElement('h5');
+            h5El.textContent = 'h5 content'
+            box.appendChild(h5El); // works
+
+            // add multi nodes
+            box.append(h4El, h5El);
+
+            
+
+        </script>
+    </div>
+    
+</body>
+</html>

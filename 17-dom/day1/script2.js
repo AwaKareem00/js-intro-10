@@ -64,3 +64,14 @@ console.log(boxes2);
 const boxes3 = document.querySelectorAll('.box');
 console.log(boxes3);
 
+
+console.log('querySelector ----- ');
+boxes3.forEach(el => console.log(el));
+
+boxes3.entries((a,b) => console.log(a,b));
+console.log('querySelector ----- ');
+
+
+
+
+
