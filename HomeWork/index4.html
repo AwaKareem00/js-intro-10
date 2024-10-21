@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Fighting Game</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #1b1b1b;
+      color: #fff;
+    }
+
+    .container {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      background-color: #222;
+      overflow: hidden;
+    }
+
+    #battlefield {
+      width: 100%;
+      height: 100%;
+      background-color: #444;
+      position: relative;
+    }
+
+    .character {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      background-size: cover;
+      bottom: 50px;
+    }
+
+    .char1 {
+      background-image: url('path_to_generated_image'); /* Update with the path to the downloaded image */
+      left: 10%;
+    }
+
+    .char2 {
+      background-image: url('path_to_generated_image'); /* Update with the path to the downloaded image */
+      right: 10%;
+    }
+
+    #char1-health, #char2-health {
+      position: absolute;
+      top: 10px;
+      height: 20px;
+      background-color: red;
+    }
+
+    #char1-health {
+      left: 10px;
+      width: 100%;
+    }
+
+    #char2-health {
+      right: 10px;
+      width: 100%;
+    }
+
+    .health-bar {
+      background-color: green;
+      height: 100%;
+    }
+
+    #win-message {
+      position: absolute;
+      display: none;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3rem;
+      color: yellow;
+      text-shadow: 2px 2px 10px black;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div id="battlefield">
+      <div class="character char1" id="char1"></div>
+      <div class="character char2" id="char2"></div>
+
+      <!-- Health bars -->
+      <div id="char1-health">
+        <div class="health-bar" id="char1-health-bar" style="width: 100%;"></div>
+      </div>
+      <div id="char2-health">
+        <div class="health-bar" id="char2-health-bar" style="width: 100%;"></div>
+      </div>
+
+      <!-- Win message -->
+      <div id="win-message">Character 1 Wins! 🏆</div>
+    </div>
+  </div>
+
+  <script>
+    const char1 = document.getElementById('char1');
+    const char2 = document.getElementById('char2');
+    const char1HealthBar = document.getElementById('char1-health-bar');
+    const char2HealthBar = document.getElementById('char2-health-bar');
+    const winMessage = document.getElementById('win-message');
+
+    let char1Position = 10;
+    let char2Position = 80;
+    let char1Health = 100;
+    let char2Health = 100;
+    const step = 5;
+
+    // Keyboard control
+    document.addEventListener('keydown', function(event) {
+      const key = event.key;
+
+      // Move Character 1 (left and right)
+      if (key === 'ArrowLeft' && char1Position > 0) {
+        char1Position -= step;
+      }
+      if (key === 'ArrowRight' && char1Position < 85) {
+        char1Position += step;
+      }
+
+      // Update Character 1's position
+      char1.style.left = char1Position + '%';
+
+      // Punch (attack Character 2)
+      if (key === ' ') {
+        punchChar2();
+      }
+    });
+
+    // Character 1 punches Character 2
+    function punchChar2() {
+      const char1Rect = char1.getBoundingClientRect();
+      const char2Rect = char2.getBoundingClientRect();
+
+      // Check if Character 1 is near enough to punch Character 2
+      if (Math.abs(char1Rect.left - char2Rect.left) < 150) {
+        char2Health -= 10;
+        char2HealthBar.style.width = char2Health + '%';
+
+        if (char2Health <= 0) {
+          char2Health = 0;
+          winMessage.style.display = 'block'; // Show win message
+        }
+      }
+    }
+  </script>
+</body>
+</html>

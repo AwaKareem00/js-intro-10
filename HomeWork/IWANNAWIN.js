@@ -310,3 +310,18 @@ Write a function named as fizzBuzz() which takes 2 number arguments and returns 
 NOTE: Make your code dynamic that works for any numbers.
 Assume you will not be given negative numbers.
 Examples:fizzBuzz(13, 18) -> "13 | 14 | FizzBuzz | 16 | 17 | Fizz" fizzBuzz(12, 5) -> "Buzz | Fizz | 7 | 8 | Fizz | Buzz | 11 | Fizz"fizzBuzz(5, 5) -> "Buzz"fizzBuzz(9, 6) -> "Fizz | 7 | 8 | Fizz" */
+
+
+const countPos = arr => {
+    return (arr.every(arr > 0))
+}
+
+
+
+console.log(countPos([-45, 0, 0, 34, 5, 67]));
+console.log(countPos([-23, -4, 0, 2, 5, 90, 123]));
+console.log(countPos([0, -1, -2, -3]));
+
+
+
+
