@@ -1,0 +1,19 @@
+// Arry prototype last 
+
+Array.prototype.last = function() {
+
+    if (this.length === 0) {
+        return -1;
+    
+    } else {
+        return this [this.length -1]
+    }
+    
+};
+
+Array.prototype.last = function() {
+
+    return this.length ? this[this.length - 1] : -1;
+};
+
+console.log(last([null, {}, 3]));
