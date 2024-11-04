@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monkey Swinging from Tree</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #87ceeb;
+        }
+
+        .scene {
+            position: relative;
+            width: 300px;
+            height: 300px;
+        }
+
+        .tree {
+            position: absolute;
+            left: 50px;
+            top: 0;
+            width: 50px;
+            height: 300px;
+            background-color: #8b4513;
+        }
+
+        .branch {
+            position: absolute;
+            top: 30px;
+            left: 50px;
+            width: 200px;
+            height: 20px;
+            background-color: #8b4513;
+        }
+
+        .monkey {
+            position: absolute;
+            top: 60px;
+            left: 180px;
+            width: 40px;
+            height: 40px;
+            background-color: #654321;
+            border-radius: 50%;
+            animation: swing 3s ease-in-out infinite;
+            transform-origin: top left;
+        }
+
+        @keyframes swing {
+            0% {
+                transform: rotate(30deg);
+            }
+            50% {
+                transform: rotate(-30deg);
+            }
+            100% {
+                transform: rotate(30deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="scene">
+        <div class="tree">
+            <div class="branch"></div>
+        </div>
+        <div class="monkey"></div>
+    </div>
+</body>
+</html>

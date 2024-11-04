@@ -170,7 +170,7 @@ function reverseSW(str) {
     return strAArr.join(" ");
 }
 
-console.log(reverseSW("Hello World"));
+console.log(reverseSW("Hello"));
 console.log('\n-------------------TASK18---------------------\n');
 function getEvens(num1, num2){
 
