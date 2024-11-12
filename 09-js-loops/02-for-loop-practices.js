@@ -3,7 +3,22 @@ const { CharacterHelper, getRandomNumber } = require('../utils/MathHelper.js');
 for(let i = 1; i <= 10; i++) {
     console.log(i);
 }
-
+console.log(kareem);
+console.log(kareem);
+console.log(kareem);
+console.log(kareem);
+console.log(kareem);
+console.log(kareem);
+console.log(kareem);
+console.log(kareem);
+console.log(kareem);
+console.log(kareem);
+console.log(kareem);
+console.log(kareem);
+console.log(kareem);
+console.log(kareem);
+console.log(kareem);
+console.log(kareem);
 
 // 100 to 0
 for(let i = 100; i >= 0; i--) {

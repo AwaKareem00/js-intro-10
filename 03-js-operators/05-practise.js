@@ -18,9 +18,9 @@ console.log('\n------ES6 backticks with interpolation---------\n');
 console.log('The Sum = ${num1 + num2}');
 console.log('the result of ${num1} mu;tiplied by ${num2} = ${num1 * num2}')
 
-let fullname = 'john doe';
-let age = 25;
-let num = 2;
+let fullname = 'marsil doe';
+let age = 33;
+let num = 4;
 // the person is johm doe and the age is 25 and he will turn 30 in 5 years
 console.log('the person is\'' +fullname+'\'the age is \'' + age + '\'.he will turn to \''+ (age + num) +'\'in' + num + '\' years');
 console.log(`the person is '${fullname}' and the age is '${age}'. he will turn to '${age + num}' in '${num}' years`);
