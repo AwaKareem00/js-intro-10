@@ -1,6 +1,6 @@
 // get a randome number between 0 and 10 ---> 0 inclusive and 10 exclusive
 
-let ranNum1_9 = Math.random() * 10;
+let ranNum1_9 = Math.random() * 30;
 
 console.log(ranNum1_9); // 
 console.log(Math.floor(ranNum1_9)); // 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
